@@ -1,0 +1,29 @@
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - name: Assemble site
+        run: |
+          mkdir -p site/engine site/icons
+          cp index.html styles.css app.js manifest.webmanifest sw.js .nojekyll site/
+          cp engine/*.js site/engine/
+          cp icons/*.png site/icons/
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: site
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

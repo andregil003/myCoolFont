@@ -1,0 +1,23 @@
+{
+  "name": "mycoolfont",
+  "version": "1.0.0",
+  "description": "Tu letra hecha fuente: de tu tablet a TTF con variantes. 100% gratis, local, sin subidas.",
+  "license": "MIT",
+  "author": "Jorge André Gil Leonardo",
+  "bin": {
+    "mycoolfont": "bin/mycoolfont.js"
+  },
+  "main": "lib/charsets.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "font",
+    "handwriting",
+    "ttf",
+    "espanol",
+    "matematicas",
+    "calt",
+    "mycoolfont"
+  ]
+}

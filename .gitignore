@@ -1,0 +1,14 @@
+node_modules/
+build/
+work/
+cells/
+*.log
+.DS_Store
+Thumbs.db
+plantilla-*.pdf
+preview-*.png
+render-*.svg
+*-jittered.ttf
+test/m*-test.ttf
+test/m*-test.woff
+test/m*-validate.py
